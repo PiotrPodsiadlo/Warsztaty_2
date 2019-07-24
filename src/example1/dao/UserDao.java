@@ -3,6 +3,7 @@ package example1.dao;
 import example1.User;
 
 import java.sql.*;
+import java.util.Arrays;
 
 public class UserDao {
 
@@ -41,7 +42,6 @@ public class UserDao {
             return null;
         }
     }
-
     public User read(int userId) {
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
             PreparedStatement statement = conn.prepareStatement(READ_USER_QUERY);
@@ -60,7 +60,6 @@ public class UserDao {
         }
         return null;
     }
-
     public void update(User user) {
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
             PreparedStatement statement = conn.prepareStatement(UPDATE_USER_QUERY);
@@ -73,7 +72,6 @@ public class UserDao {
             e.printStackTrace();
         }
     }
-
     public void delete(int userId) {
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
             PreparedStatement statement = conn.prepareStatement(DELETE_USER_QUERY);
@@ -83,7 +81,28 @@ public class UserDao {
             e.printStackTrace();
         }
     }
-
+    private User[] addToArray(User user, User[] users) {
+        User[] tmpUsers = Arrays.copyOf(users, users.length + 1);
+        tmpUsers[users.length] = user;
+        return tmpUsers;
+    }
+    public User[] findAll() {
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            User[] users = new User[0];
+            PreparedStatement statement = conn.prepareStatement(FIND_ALL_USERS_QUERY);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                User user = new User();
+                user.setId(resultSet.getInt("id"));
+                user.setUserName(resultSet.getString("username"));
+                user.setEmail(resultSet.getString("email"));
+                user.setPassword(resultSet.getString("password"));
+                users = addToArray(user, users);
+            }
+            return users;
+        } catch (SQLException e) {
+            e.printStackTrace(); return null;
+        }}
 
 
 

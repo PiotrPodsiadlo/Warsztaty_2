@@ -7,18 +7,20 @@ public class Main1 {
     public static void main(String[] args) {
 
 //        User user = new User();
-
-//        user.setEmail("dupa1@wp.pl");
+//        user.setEmail("janek@wp.pl");
 //        user.setPassword("dupa1234");
-//        user.setUserName("tomek1");
+//        user.hashPassword(user.getPassword());
+//        user.setUserName("janek1");
 
         UserDao userDao = new UserDao();
 
 //        userDao.create(user);
-        User user = userDao.read(1);
-        user.hashPassword(user.getPassword());
-        userDao.update(user);
+//        System.out.println(user.getId());
+//        User user = userDao.read(1);
+//        user.hashPassword(user.getPassword());
+//        userDao.update(user);
 
+//        userDao.delete(3);
 
     }
 }
