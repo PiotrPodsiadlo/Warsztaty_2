@@ -34,6 +34,7 @@ public class UserManagement1 {
                     User user = new User(name, email, password);
                     user.hashPassword(password);
                     userDao.create(user);
+                    System.out.println(user);
                     System.out.println("utworzono użytkownika");
                     break;
 
@@ -45,6 +46,7 @@ public class UserManagement1 {
                     userToEdit.setPassword(InputText.textFromconsole("podaj hasło użytkownika"));
                     userToEdit.hashPassword(userToEdit.getPassword());
                     userDao.update(userToEdit);
+                    System.out.println(userToEdit);
                     System.out.println("zaktualizowano uzytkownika");
                     break;
 
