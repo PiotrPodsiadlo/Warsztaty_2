@@ -1,8 +1,6 @@
 package example1;
 
-import example1.dao.ExerciseDao;
 import example1.dao.GroupDao;
-import example1.model.Exercise;
 import example1.model.Group;
 import example1.serviceClasses.InputInt;
 import example1.serviceClasses.InputText;
