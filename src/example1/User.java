@@ -61,4 +61,14 @@ public class User {
         this.password = BCrypt.hashpw(password, BCrypt.gensalt());
 
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
