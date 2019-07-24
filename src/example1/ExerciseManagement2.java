@@ -55,17 +55,5 @@ public class ExerciseManagement2 {
                 break;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
