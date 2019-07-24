@@ -1,6 +1,7 @@
 package example1;
 
 import example1.dao.UserDao;
+import example1.model.User;
 
 public class Main1 {
 

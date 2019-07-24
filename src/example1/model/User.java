@@ -1,6 +1,5 @@
-package example1;
+package example1.model;
 
-import com.oracle.webservices.internal.api.databinding.DatabindingMode;
 import org.mindrot.jbcrypt.BCrypt;
 
 
