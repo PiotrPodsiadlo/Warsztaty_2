@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class UserDao {
 
     private final String URL =
-            "jdbc:mysql://localhost:3306/project2?useSSL=false&characterEncoding=utf8&serverTimezone=CET";
+            "jdbc:mysql://localhost:3306/codingschool?useSSL=false&characterEncoding=utf8&serverTimezone=CET";
     private final String USER = "root";
     private final String PASSWORD = "coderslab";
 

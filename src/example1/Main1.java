@@ -21,6 +21,12 @@ public class Main1 {
 //        userDao.update(user);
 
 //        userDao.delete(3);
+        User[] users = userDao.findAll();
+        for (User u: users
+             ) {
+            System.out.println(u.toString());
+        }
+
 
     }
 }
