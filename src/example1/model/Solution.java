@@ -11,7 +11,7 @@ public class Solution {
     private int exerciseId;
     private int usersId;
 
-    public Solution(String created, String description, int exerciseId, int usersId) {
+    public Solution(String created, int exerciseId, String description, int usersId) {
         this.created = created;
         this.description = description;
         this.exerciseId = exerciseId;
