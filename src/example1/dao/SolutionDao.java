@@ -98,8 +98,8 @@ public class SolutionDao {
             while (resultSet.next()) {
                 Solution solution = new Solution();
                 solution.setId(resultSet.getInt("id"));
-                solution.setCreated(LocalDateTime.parse(resultSet.getString("created")));
-                solution.setUpdated(LocalDateTime.parse(resultSet.getString("updated")));
+                solution.setCreated(resultSet.getString("created"));
+                solution.setUpdated(resultSet.getString("updated"));
                 solution.setDescription(resultSet.getString("description"));
                 solution.setExerciseId(resultSet.getInt("exercise_id"));
                 solution.setUsersId(resultSet.getInt("users_id"));
@@ -119,8 +119,8 @@ public class SolutionDao {
             while (resultSet.next()) {
                 Solution solution = new Solution();
                 solution.setId(resultSet.getInt("id"));
-                solution.setCreated(LocalDateTime.parse(resultSet.getString("created")));
-                solution.setUpdated(LocalDateTime.parse(resultSet.getString("updated")));
+                solution.setCreated(resultSet.getString("created"));
+                solution.setUpdated(resultSet.getString("updated"));
                 solution.setDescription(resultSet.getString("description"));
                 solution.setExerciseId(resultSet.getInt("exercise_id"));
                 solution.setUsersId(resultSet.getInt("users_id"));
@@ -140,8 +140,8 @@ public class SolutionDao {
             while (resultSet.next()) {
                 Solution solution = new Solution();
                 solution.setId(resultSet.getInt("id"));
-                solution.setCreated(LocalDateTime.parse(resultSet.getString("created")));
-                solution.setUpdated(LocalDateTime.parse(resultSet.getString("updated")));
+                solution.setCreated(resultSet.getString("created"));
+                solution.setUpdated(resultSet.getString("updated"));
                 solution.setDescription(resultSet.getString("description"));
                 solution.setExerciseId(resultSet.getInt("exercise_id"));
                 solution.setUsersId(resultSet.getInt("users_id"));

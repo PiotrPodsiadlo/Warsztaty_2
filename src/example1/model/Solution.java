@@ -5,9 +5,8 @@ import java.time.LocalDateTime;
 public class Solution {
 
     private int id;
-//    private LocalDateTime created;
     private String created;
-    private LocalDateTime updated;
+    private String updated;
     private String description;
     private int exerciseId;
     private int usersId;
@@ -41,11 +40,11 @@ public class Solution {
         return this;
     }
 
-    public LocalDateTime getUpdated() {
+    public String getUpdated() {
         return updated;
     }
 
-    public Solution setUpdated(LocalDateTime updated) {
+    public Solution setUpdated(String updated) {
         this.updated = updated;
         return this;
     }
