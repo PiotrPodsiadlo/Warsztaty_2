@@ -6,9 +6,11 @@ import example1.model.Solution;
 
 import java.sql.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class SolutionDao {
+
 
     private static final String CREATE_SOLUTION_QUERY =
             "INSERT INTO solutions(created, description, exercise_id, users_id) VALUES (?, ?, ?, ?)";
@@ -52,8 +54,8 @@ public class SolutionDao {
             if (resultSet.next()) {
                 Solution solution = new Solution();
                 solution.setId(resultSet.getInt("id"));
-                solution.setCreated(LocalDateTime.parse(resultSet.getString("created")));
-                solution.setUpdated(LocalDateTime.parse(resultSet.getString("updated")));
+                solution.setCreated(resultSet.getString("created"));
+                solution.setUpdated(resultSet.getString("updated"));
                 solution.setDescription(resultSet.getString("description"));
                 solution.setExerciseId(resultSet.getInt("exercise_id"));
                 solution.setUsersId(resultSet.getInt("users_id"));
@@ -96,8 +98,8 @@ public class SolutionDao {
             while (resultSet.next()) {
                 Solution solution = new Solution();
                 solution.setId(resultSet.getInt("id"));
-                solution.setCreated(LocalDateTime.parse(resultSet.getString("created")));
-                solution.setUpdated(LocalDateTime.parse(resultSet.getString("updated")));
+                solution.setCreated(resultSet.getString("created"));
+                solution.setUpdated(resultSet.getString("updated"));
                 solution.setDescription(resultSet.getString("description"));
                 solution.setExerciseId(resultSet.getInt("exercise_id"));
                 solution.setUsersId(resultSet.getInt("users_id"));
@@ -117,8 +119,8 @@ public class SolutionDao {
             while (resultSet.next()) {
                 Solution solution = new Solution();
                 solution.setId(resultSet.getInt("id"));
-                solution.setCreated(LocalDateTime.parse(resultSet.getString("created")));
-                solution.setUpdated(LocalDateTime.parse(resultSet.getString("updated")));
+                solution.setCreated(resultSet.getString("created"));
+                solution.setUpdated(resultSet.getString("updated"));
                 solution.setDescription(resultSet.getString("description"));
                 solution.setExerciseId(resultSet.getInt("exercise_id"));
                 solution.setUsersId(resultSet.getInt("users_id"));
@@ -138,8 +140,8 @@ public class SolutionDao {
             while (resultSet.next()) {
                 Solution solution = new Solution();
                 solution.setId(resultSet.getInt("id"));
-                solution.setCreated(LocalDateTime.parse(resultSet.getString("created")));
-                solution.setUpdated(LocalDateTime.parse(resultSet.getString("updated")));
+                solution.setCreated(resultSet.getString("created"));
+                solution.setUpdated(resultSet.getString("updated"));
                 solution.setDescription(resultSet.getString("description"));
                 solution.setExerciseId(resultSet.getInt("exercise_id"));
                 solution.setUsersId(resultSet.getInt("users_id"));
