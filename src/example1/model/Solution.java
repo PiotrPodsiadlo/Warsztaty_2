@@ -5,13 +5,14 @@ import java.time.LocalDateTime;
 public class Solution {
 
     private int id;
-    private LocalDateTime created;
+//    private LocalDateTime created;
+    private String created;
     private LocalDateTime updated;
     private String description;
     private int exerciseId;
     private int usersId;
 
-    public Solution(LocalDateTime created, String description, int exerciseId, int usersId) {
+    public Solution(String created, String description, int exerciseId, int usersId) {
         this.created = created;
         this.description = description;
         this.exerciseId = exerciseId;
@@ -19,7 +20,7 @@ public class Solution {
     }
 
     public Solution() {
-        created = LocalDateTime.now();
+        created = LocalDateTime.now().toString();
     }
 
     public int getId() {
@@ -31,11 +32,11 @@ public class Solution {
         return this;
     }
 
-    public LocalDateTime getCreated() {
+    public String getCreated() {
         return created;
     }
 
-    public Solution setCreated(LocalDateTime created) {
+    public Solution setCreated(String created) {
         this.created = created;
         return this;
     }
